@@ -36,3 +36,42 @@ Deployment & Tools
 Firebase Authentication & Firestore
 TensorFlow Lite Model Converter
 Xcode & Android Studio for iOS/Android development
+
+
+
+🔹 Firebase Features Used in the App
+1️⃣ Firebase Authentication 🛡️
+User Authentication with Email/Password, Google Sign-In, and Apple Sign-In.
+Ensures secure login/logout for medical professionals and patients.
+Session Management to keep users logged in.
+
+2️⃣ Firebase Firestore (Cloud Database) 🗄️
+Stores user scan history, AI predictions, and report metadata.
+Allows real-time sync of MRI scan records across multiple devices.
+Each scan entry includes:
+User ID
+MRI scan result
+AI model confidence score
+Timestamp
+
+3️⃣ Firebase Cloud Storage ☁️
+Used for storing uploaded MRI scan images.
+Ensures HIPAA-compliant secure storage for medical records.
+Images can be retrieved for further analysis.
+
+4️⃣ Firebase Functions (Optional for Backend Processing) ⚙️
+Can be used to preprocess MRI scans before passing them to the AI model.
+Enables automated report generation and PDF creation.
+
+5️⃣ Firebase Crashlytics & Analytics 📊
+Monitors app performance, crashes, and errors in real-time.
+Helps optimize user experience by tracking app usage.
+
+
+📌 Firebase Workflow in the App
+1️⃣ User logs in via Firebase Authentication.
+2️⃣ Uploads MRI scan (stored in Firebase Cloud Storage).
+3️⃣ AI model processes the image and stores the result in Firestore.
+4️⃣ User retrieves past scans from Firestore history.
+5️⃣ Report generation using Firebase Functions (if needed).
+
